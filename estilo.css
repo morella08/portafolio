@@ -1,0 +1,269 @@
+.containerr {
+    width: 100%;
+    height: 100%;
+    --s: 84px;
+    --c1: #f2f2f2;
+    --c2: #cdcbcc;
+    --c3: #999999;
+  
+    --_g: 0 120deg, #0000 0;
+    background: conic-gradient(
+        from 0deg at calc(500% / 6) calc(100% / 3),
+        var(--c3) var(--_g)
+      ),
+      conic-gradient(
+        from -120deg at calc(100% / 6) calc(100% / 3),
+        var(--c2) var(--_g)
+      ),
+      conic-gradient(
+        from 120deg at calc(100% / 3) calc(500% / 6),
+        var(--c1) var(--_g)
+      ),
+      conic-gradient(
+        from 120deg at calc(200% / 3) calc(500% / 6),
+        var(--c1) var(--_g)
+      ),
+      conic-gradient(
+        from -180deg at calc(100% / 3) 50%,
+        var(--c2) 60deg,
+        var(--c1) var(--_g)
+      ),
+      conic-gradient(
+        from 60deg at calc(200% / 3) 50%,
+        var(--c1) 60deg,
+        var(--c3) var(--_g)
+      ),
+      conic-gradient(
+        from -60deg at 50% calc(100% / 3),
+        var(--c1) 120deg,
+        var(--c2) 0 240deg,
+        var(--c3) 0
+      );
+    background-size: calc(var(--s) * 1.732) var(--s);
+  }
+  
+{  
+    margin: 0;  
+    padding: 0;  
+     
+}  
+
+.body {  
+    font-family: 'Roboto', sans-serif;  
+    line-height: 1.6;  
+}  
+header {  
+    background: #333;  
+    color: #fff;  
+    padding: 20px 0;  
+    text-align: center;  
+    width: 20%;  
+    height: 100vh;  
+    position: fixed;  
+    left: 0;  
+    top: 0;  
+}  
+
+header .nav {  
+    list-style: none;  
+    padding: 0;  
+    gap: 20px; /* Added to separate buttons */
+}  
+
+header .nav .cta {  
+    border: none;  
+    background: none;  
+    cursor: pointer;  
+}
+
+header .nav .cta span {  
+    padding-bottom: 7px;  
+    letter-spacing: 4px;  
+    font-size: 14px;  
+    padding-right: 15px;  
+    text-transform: uppercase;  
+}
+
+header .nav .cta svg {  
+    transform: translateX(-8px);  
+    transition: all 0.3s ease;  
+}
+
+header .nav .cta:hover svg {  
+    transform: translateX(0);  
+}
+
+header .nav .cta:active svg {  
+    transform: scale(0.9);  
+}
+
+header .nav .hover-underline-animation {  
+    position: relative;  
+    color: black;  
+    padding-bottom: 20px;  
+}
+
+header .nav .hover-underline-animation:after {  
+    content: "";  
+    position: absolute;  
+    width: 100%;  
+    transform: scaleX(0);  
+    height: 2px;  
+    bottom: 0;  
+    left: 0;  
+    background-color: #000000;  
+    transform-origin: bottom right;  
+    transition: transform 0.25s ease-out;  
+}
+
+header .nav .cta:hover .hover-underline-animation:after {  
+    transform: scaleX(1);  
+    transform-origin: bottom left;  
+}
+.service {
+    padding: 60px 20px;  
+    text-align: center;  
+} 
+.card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    margin: 15px; /* Added margin for spacing */
+}
+
+
+/* Added container to hold all cards and display them flexibly */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Adjusted .card svg and .card__content styles to maintain their original functionality */
+.card svg {
+    width: 48px;
+    fill: #333;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card:hover {
+    transform: rotate(-5deg) scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card:hover .card__content {
+    transform: translate(-50%, -50%) rotate(0deg);
+    opacity: 1;
+}
+
+.card__title {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    font-weight: 700;
+}
+
+.card__description {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #777;
+    line-height: 1.4;
+}
+
+.card:hover svg {
+    scale: 0;
+    transform: rotate(-45deg);
+}
+
+  
+
+.portfolio {  
+    padding: 60px 20px;  
+    text-align: center;  
+}  
+
+.portfolio h2 {  
+    margin-bottom: 20px;  
+}  
+
+.portfolio-items {  
+    display: flex;  
+    justify-content: center;  
+    flex-wrap: wrap;  
+}  
+
+.portfolio-item {  
+    margin: 15px;  
+    border: 1px solid #ccc;  
+    border-radius: 5px;  
+    overflow: hidden;  
+    max-width: 300px;  
+    transition: transform 0.3s;  
+}  
+
+.portfolio-item:hover {  
+    transform: scale(1.05);  
+}  
+
+.portfolio-item img {  
+    width: 100%;  
+    height: 200px;  
+    object-fit: cover;  
+}  
+
+.portfolio-item h3 {  
+    margin: 10px 0;  
+}  
+
+.portfolio-item p {  
+    padding: 0 10px;  
+}  
+
+.button {  
+    display: inline-block;  
+    padding: 10px 20px;  
+    background: #333;  
+    color: #fff;  
+    text-decoration: none;  
+    border-radius: 5px;  
+    margin: 10px;  
+}  
+
+.about, .contact {  
+    padding: 60px 20px;  
+    text-align: center;  
+}  
+
+footer {  
+    background: #333;  
+    color: #fff;  
+    text-align: center;  
+    padding: 10px 0;  
+}
+.logo {
+    width: 100px;
+    height: 100px;
+    margin: 50px;
+    border-radius: 20px;
+}

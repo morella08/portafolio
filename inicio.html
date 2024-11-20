@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        .containerr {
+    width: 100%;
+    height: 100%;
+    --s: 84px;
+    --c1: #f2f2f2;
+    --c2: #cdcbcc;
+    --c3: #999999;
+  
+    --_g: 0 120deg, #0000 0;
+    background: conic-gradient(
+        from 0deg at calc(500% / 6) calc(100% / 3),
+        var(--c3) var(--_g)
+      ),
+      conic-gradient(
+        from -120deg at calc(100% / 6) calc(100% / 3),
+        var(--c2) var(--_g)
+      ),
+      conic-gradient(
+        from 120deg at calc(100% / 3) calc(500% / 6),
+        var(--c1) var(--_g)
+      ),
+      conic-gradient(
+        from 120deg at calc(200% / 3) calc(500% / 6),
+        var(--c1) var(--_g)
+      ),
+      conic-gradient(
+        from -180deg at calc(100% / 3) 50%,
+        var(--c2) 60deg,
+        var(--c1) var(--_g)
+      ),
+      conic-gradient(
+        from 60deg at calc(200% / 3) 50%,
+        var(--c1) 60deg,
+        var(--c3) var(--_g)
+      ),
+      conic-gradient(
+        from -60deg at 50% calc(100% / 3),
+        var(--c1) 120deg,
+        var(--c2) 0 240deg,
+        var(--c3) 0
+      );
+    background-size: calc(var(--s) * 1.732) var(--s);
+  }
+.hero {
+  height: 100vh;
+  background-image: url('tu-imagen-de-fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.btn {
+  /* Estilos para el botón */
+  background-color: #4CAF50; /* Verde */
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.cta {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.cta span {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 14px;
+  padding-right: 15px;
+  text-transform: uppercase;
+}
+
+.cta svg {
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active svg {
+  transform: scale(0.9);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: black;
+  padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+    </style>
+
+<head>
+    <div class="containerr">  
+  <title>Mi Portafolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <section class="hero">
+    <div class="hero-content">
+      <h1 style="font-size: 2.5em;"> Hola, soy Analia Morella Fernandez!</h1>
+      <p style="font-size: 1.5em; font-weight: bold;">desarrolladora web en back-end y Community Manager .</p>
+      <a href="index.html" class="cta" style="font-size: 1em; padding: 10px 20px; display: inline-block;">
+        <span class="hover-underline-animation" style="font-size: 1.5em; color: #000000;">Ver mi Portafolio</span>
+        <svg
+          id="arrow-horizontal"
+          xmlns="http://www.w3.org/2000/svg"
+          width="45"
+          height="15"
+          viewBox="0 0 46 16"
+        >
+          <path
+            id="Path_10"
+            data-name="Path 10"
+            d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+            transform="translate(30)"
+          ></path>
+        </svg>
+      </a>
+    </div>
+  </section>
+  </body>
+</html>
